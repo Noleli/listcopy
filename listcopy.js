@@ -22,7 +22,7 @@ function getUserLists(username)
 
 function doCopy()
 {
-	$("#working").html("werkin");
+	$("#working").html("werkin&hellip;");
 	var data = {
 		action: "copyLists",
 		source_user: $("#source_user").val(),
