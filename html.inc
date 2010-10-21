@@ -8,16 +8,10 @@
   </head>
   <body>
     <div>
-      <h2>Welcome to a Twitter OAuth PHP example.</h2>
+      <h2>Twitter List Copy</h2>
 
-      <p>This site is a basic showcase of Twitters OAuth authentication method. If you are having issues try <a href='./clearsessions.php'>clearing your session</a>.</p>
+      <p>If you are having issues try <a href='./clearsessions.php'>clearing your session</a>.</p>
 
-      <p>
-        Links:
-        <a href='http://github.com/abraham/twitteroauth'>Source Code</a> &amp;
-        <a href='http://wiki.github.com/abraham/twitteroauth/documentation'>Documentation</a> |
-        Contact @<a href='http://twitter.com/abraham'>abraham</a>
-	  </p>
       <?php print_r($content); ?>
 
       <hr />
@@ -35,7 +29,10 @@
 		<p><label for="source_list">The list you want to copy: </label><select id="source_list" name="source_list"></select></p>
 		
 		<h2>Copy to</h2>
+		<p>Heads up: this will <em>not</em> wipe out a list first, so you should probably create a new list and copy to that.</p>
 		<p><label for="dest_list">One of your existing lists: </label><select id="dest_list" name="source_list"><? echo $mylists_options; ?></select></p>
+		<p><input type="button" name="doCopy" id="doCopy" value="Copy!" /></p>
+		<div id="working"></div>
 
 	</div>
     

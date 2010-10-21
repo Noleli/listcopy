@@ -68,21 +68,27 @@ function getScreenName(&$connection)
 	return $creds->screen_name;
 }
 
-/*$cursor = -1;
-$content = $connection->get('account/rate_limit_status');
-
-while($cursor)
+if($_REQUEST["action"] == "copyLists")
 {
-	$results = $connection->get('Noleli/umsi/members', array("cursor"=>$cursor));	
-	$members = array();
-	
-	foreach($results->users as $user)
+	$cursor = -1;
+	//$content = $connection->get('account/rate_limit_status');
+	$total = 0;
+	while($cursor)
 	{
-		$members[] = $user->screen_name;
+		$results = $connection->get($_REQUEST["source_user"]."/".$_REQUEST["source_list"]."/members", array("cursor"=>$cursor));
+		$members = array();
+		
+		foreach($results->users as $user)
+		{
+			$members[] = $user->screen_name;
+		}
+		$add_result = $connection->post(getScreenName($connection)."/".$_REQUEST["dest_list"].'/members/create_all', array('screen_name'=>implode(",", $members)));
+		$cursor = $results->next_cursor_str;
+		$total+=count($members);
 	}
-	$add_result = $connection->post('Noleli/test-list/members/create_all', array('screen_name'=>implode(",", $members)));
-	$cursor = $results->next_cursor_str;
-}*/
+	echo "Added ".$total." people to ".$_REQUEST["dest_list"].".";
+	die;
+}
 
 /* Include HTML to display on the page */
 include('html.inc');
