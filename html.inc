@@ -22,6 +22,9 @@
     <?php if (isset($status_text)) { ?>
       <?php echo '<h3>'.$status_text.'</h3>'; ?>
     <?php } ?>
+    
+    <?php if($content == "") // this is a super janky test
+    {?>
 	<div>
 		<h2>Copy from</h2>
 		<p><label for="source_user">User who owns the list you want to copy: </label><input id="source_user" name="source_user" />
@@ -35,7 +38,7 @@
 		<div id="working"></div>
 
 	</div>
-    
+    <? } ?>
     <!--<p>
       <pre>
         <?php
