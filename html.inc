@@ -29,9 +29,14 @@
       <?php echo '<h3>'.$status_text.'</h3>'; ?>
     <?php } ?>
 	<div>
-		<input id="source_user" name="source_user" />
-		<input type="button" name="get_source_lists" id="get_source_lists" value="Get lists" />
-		<select id="source_list" name="source_list"></select>
+		<h2>Copy from</h2>
+		<p><label for="source_user">User who owns the list you want to copy: </label><input id="source_user" name="source_user" />
+		<input type="button" name="get_source_lists" id="get_source_lists" value="Get lists" /></p>
+		<p><label for="source_list">The list you want to copy: </label><select id="source_list" name="source_list"></select></p>
+		
+		<h2>Copy to</h2>
+		<p><label for="dest_list">One of your existing lists: </label><select id="dest_list" name="source_list"><? echo $mylists_options; ?></select></p>
+
 	</div>
     
     <!--<p>

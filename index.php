@@ -36,14 +36,36 @@ $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oau
 
 if($_REQUEST["action"] == "getUserLists")
 {
-	$result = $connection->get($_REQUEST["username"]."/lists");
+	//$result = $connection->get($_REQUEST["username"]."/lists");
+	$lists = getListsByUser($_REQUEST["username"], $connection);
+	echo json_encode($lists);
+	die;
+}
+
+// Get existing lists and make option fields for them
+$screen_name = getScreenName($connection);
+$mylists = getListsByUser($screen_name, $connection);
+$mylists_options;
+foreach($mylists as $list)
+{
+	$mylists_options.="<option value='$list'>$list</option>\n";
+}
+
+function getListsByUser($username, &$connection)
+{
+	$result = $connection->get($username."/lists");
 	$lists = array();
 	foreach($result->lists as $list)
 	{
 		$lists[] = $list->slug;
 	}
-	echo json_encode($lists);
-	die;
+	return $lists;
+}
+
+function getScreenName(&$connection)
+{
+	$creds = $connection->get("account/verify_credentials");
+	return $creds->screen_name;
 }
 
 /*$cursor = -1;
