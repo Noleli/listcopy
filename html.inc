@@ -49,6 +49,26 @@
         ?>
       </pre>
     </p>-->
-
+	<div id="footer">A <a href="http://twitter.com/Noleli">Noleli</a>/<a href="http://noahliebman.com">.nl</a> production.</div>
+	
+	
+	<!-- Start of StatCounter Code -->
+	<script type="text/javascript">
+	var sc_project=6325636; 
+	var sc_invisible=1; 
+	var sc_security="86a49f2d"; 
+	</script>
+	
+	<script type="text/javascript"
+	src="http://www.statcounter.com/counter/counter_xhtml.js"></script><noscript><div
+	class="statcounter"><a title="weebly reliable statistics"
+	class="statcounter"
+	href="http://statcounter.com/weebly/"><img
+	class="statcounter"
+	src="http://c.statcounter.com/6325636/0/86a49f2d/1/"
+	alt="weebly reliable statistics" /></a></div></noscript>
+	<!-- End of StatCounter Code -->
+	
+	
   </body>
 </html>
