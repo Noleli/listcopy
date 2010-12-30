@@ -9,7 +9,7 @@
   <body>
     <div>
       <h2>Twitter List Copy</h2>
-
+	  <p>Use this ugly-but-functional tool to copy any Twitter list to one of your own.</p>
       <p>If you are having issues try <a href='./clearsessions.php'>clearing your session</a>.</p>
 
       <?php print_r($content); ?>
@@ -32,7 +32,7 @@
 		<p><label for="source_list">The list you want to copy: </label><select id="source_list" name="source_list"></select></p>
 		
 		<h2>Copy to</h2>
-		<p>Heads up: this will <em>not</em> wipe out a list first, so you should probably create a new list and copy to that.</p>
+		<p>Heads up: this will <em>not</em> wipe out a list first, so you should probably create a new list and copy to that. I haven’t tested how it might behave when copying onto a non-blank list. I suspect it’ll merge them, but I don’t know that for sure.</p>
 		<p><label for="dest_list">One of your existing lists: </label><select id="dest_list" name="source_list"><? echo $mylists_options; ?></select></p>
 		<p><input type="button" name="doCopy" id="doCopy" value="Copy!" /></p>
 		<div id="working"></div>
