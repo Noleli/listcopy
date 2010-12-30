@@ -10,7 +10,6 @@
     <div>
       <h2>Twitter List Copy</h2>
 	  <p>Use this ugly-but-functional tool to copy any Twitter list to one of your own.</p>
-      <p>If you are having issues try <a href='./clearsessions.php'>clearing your session</a>.</p>
 
       <?php print_r($content); ?>
 
@@ -49,6 +48,7 @@
         ?>
       </pre>
     </p>-->
+    <p>If you are having issues try <a href='./clearsessions.php'>clearing your session</a>.</p>
 	<div id="footer">A <a href="http://twitter.com/Noleli">Noleli</a>/<a href="http://noahliebman.com">.nl</a> production.</div>
 	
 	
