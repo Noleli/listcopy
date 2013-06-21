@@ -39,13 +39,14 @@ if($_REQUEST["action"] == "getUserLists")
 	//$result = $connection->get($_REQUEST["username"]."/lists");
 	$lists = getListsByUser($_REQUEST["username"], $connection);
 	echo json_encode($lists);
+	// echo $lists;
 	die;
 }
 
 // Get existing lists and make option fields for them
 $screen_name = getScreenName($connection);
 $mylists = getListsByUser($screen_name, $connection);
-$mylists_options;
+$mylists_options = "";
 foreach($mylists as $list)
 {
 	$mylists_options.="<option value='$list'>$list</option>\n";
@@ -53,7 +54,7 @@ foreach($mylists as $list)
 
 function getListsByUser($username, &$connection)
 {
-	$result = $connection->get($username."/lists");
+	$result = $connection->get("lists/ownerships", array('screen_name' => $username, 'count' => 1000));
 	$lists = array();
 	foreach($result->lists as $list)
 	{
@@ -75,14 +76,18 @@ if($_REQUEST["action"] == "copyLists")
 	$total = 0;
 	while($cursor)
 	{
-		$results = $connection->get($_REQUEST["source_user"]."/".$_REQUEST["source_list"]."/members", array("cursor"=>$cursor));
+		// $results = $connection->get($_REQUEST["source_user"]."/".$_REQUEST["source_list"]."/members", array("cursor"=>$cursor));
+		$results = $connection->get("lists/members", array("slug" => $_REQUEST["source_list"], "owner_screen_name" => $_REQUEST["source_user"], "include_entities" => "false", "skip_status" => "t", "cursor" => $cursor));
 		$members = array();
+		// echo json_encode($results);
 		
 		foreach($results->users as $user)
 		{
 			$members[] = $user->screen_name;
 		}
-		$add_result = $connection->post(getScreenName($connection)."/".$_REQUEST["dest_list"].'/members/create_all', array('screen_name'=>implode(",", $members)));
+		// echo json_encode($members);
+		// $add_result = $connection->post(getScreenName($connection)."/".$_REQUEST["dest_list"].'/members/create_all', array('screen_name'=>implode(",", $members)));
+		$add_result = $connection->post("lists/members/create_all", array("slug" => $_REQUEST["dest_list"], "owner_screen_name" => $screen_name, "screen_name" => implode(",", $members)));
 		$cursor = $results->next_cursor_str;
 		$total+=count($members);
 	}
