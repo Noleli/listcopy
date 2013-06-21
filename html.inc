@@ -31,7 +31,7 @@
 		<p><label for="source_list">The list you want to copy: </label><select id="source_list" name="source_list"></select></p>
 		
 		<h2>Copy to</h2>
-		<p>Heads up: this will <em>not</em> wipe out a list first, so you should probably create a new list and copy to that. I haven’t tested how it might behave when copying onto a non-blank list. I suspect it’ll merge them, but I don’t know that for sure.</p>
+		<p>Heads up: this will <em>not</em> wipe out a list first, so you should probably create a new list and copy to that. I haven’t tested how it might behave when copying onto a non-blank list. I <em>should</em> merge them, but I don’t know that for sure.</p>
 		<p><label for="dest_list">One of your existing lists: </label><select id="dest_list" name="source_list"><? echo $mylists_options; ?></select></p>
 		<p><input type="button" name="doCopy" id="doCopy" value="Copy!" /></p>
 		<div id="working"></div>
@@ -48,8 +48,11 @@
         ?>
       </pre>
     </p>-->
-    <p>If you are having issues try <a href='./clearsessions.php'>clearing your session</a>.</p>
-	<div id="footer">A <a href="http://twitter.com/Noleli">Noleli</a>/<a href="http://noahliebman.com">.nl</a> production.</div>
+    <p><a href='./clearsessions.php'>Log out</a>.</p>
+	<div id="footer">
+		<p>Make this better on <a href="https://github.com/Noleli/listcopy">Github</a>.</p>
+		<p>A <a href="http://twitter.com/Noleli">Noleli</a>/<a href="http://noahliebman.net">.nl</a> production.</p>
+	</div>
 	
 	
 	<!-- Start of StatCounter Code -->
