@@ -7,4 +7,4 @@
 
 define('CONSUMER_KEY', 'MayQUuH3pBJDv192JKDT7A');
 define('CONSUMER_SECRET', 'PockTPcDb6RAdsnXlvZpBu0OV78hiayKsLk79zmqQE');
-define('OAUTH_CALLBACK', 'http://noahliebman.com/listcopy/callback.php');
+define('OAUTH_CALLBACK', 'http://projects.noahliebman.net/listcopy/callback.php');

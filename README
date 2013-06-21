@@ -1,7 +1,4 @@
-Abraham Williams | abraham@poseurte.ch | http://abrah.am | @abraham
+Utility to copy one Twitter list to another.
 
-The first PHP library for working with Twitter's OAuth API.
-
-Documentation: http://wiki.github.com/abraham/twitteroauth/documentation 
-Source: http://github.com/abraham/twitteroauth
-Twitter: http://apiwiki.twitter.com
+By [Noah Liebman](http://noahliebman.net)
+Uses [twitteroauth](http://github.com/abraham/twitteroauth)
