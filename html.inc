@@ -3,6 +3,7 @@
   <head>
     <title>Twitter List Copy</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link href="style.css" media="all" rel="stylesheet" type="text/css" />
     <script src="jquery.js" type="text/javascript"></script>
     <script src="listcopy.js" type="text/javascript"></script>
   </head>
@@ -51,7 +52,12 @@
     <hr>
     <div id="footer">
     	<p><a href='./clearsessions.php'>Log out</a>.</p>
-		<p>Made by a grad student in his spare time. <a href="http://tiptheweb.org/tip/" class="ttw-button ttw-button-small">Tip</a></p>
+		<p>Made by a grad student in his spare time.  <a href="http://tiptheweb.org/tip/" class="ttw-button ttw-button-small">Tip</a> <script src="paypal-button.min.js?merchant=noah@noahliebman.net" 
+		    data-button="donate" 
+		    data-name="Twitter List Copy" 
+		    data-size="small"
+		    data-callback="http://projects.noahliebman.net/listcopy/" data-env="sandbox"></script>
+		</p>
 		<p>Make this better on <a href="https://github.com/Noleli/listcopy">Github</a>.</p>
 		<p>A <a href="http://twitter.com/Noleli">Noleli</a>/<a href="http://noahliebman.net">.nl</a> production.</p>
 	</div>
@@ -87,6 +93,8 @@
 		}(this, this.document));
 	</script>
 	<!-- End TipTheWeb code -->
+
+	<script src="paypal-button.min.js" type="text/javascript"></script>
 	
   </body>
 </html>
