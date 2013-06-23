@@ -13,7 +13,7 @@
 
       <?php print_r($content); ?>
 
-      <hr />
+      <hr>
       <?php if (isset($menu)) { ?>
         <?php echo $menu; ?>
       <?php } ?>
@@ -48,8 +48,10 @@
         ?>
       </pre>
     </p>-->
-    <p><a href='./clearsessions.php'>Log out</a>.</p>
-	<div id="footer">
+    <hr>
+    <div id="footer">
+    	<p><a href='./clearsessions.php'>Log out</a>.</p>
+		<p>Made by a grad student in his spare time. <a href="http://tiptheweb.org/tip/" class="ttw-button ttw-button-small">Tip</a></p>
 		<p>Make this better on <a href="https://github.com/Noleli/listcopy">Github</a>.</p>
 		<p>A <a href="http://twitter.com/Noleli">Noleli</a>/<a href="http://noahliebman.net">.nl</a> production.</p>
 	</div>
@@ -72,6 +74,19 @@
 	alt="weebly reliable statistics" /></a></div></noscript>
 	<!-- End of StatCounter Code -->
 	
+	<!-- Start TipTheWeb code -->
+	<script>
+		(function (window, document) {
+		    var ref = document.getElementsByTagName('script')[0],
+		        script = document.createElement('script'),
+		        secure = window.location.protocol === 'https:';
+		    script.async = true;
+		    script.src = secure ? 'https://secure-platform.tiptheweb.org/tip/button.js'
+		                        : 'http://platform.tiptheweb.org/tip/button.js';
+		    ref.parentNode.insertBefore(script, ref);
+		}(this, this.document));
+	</script>
+	<!-- End TipTheWeb code -->
 	
   </body>
 </html>
