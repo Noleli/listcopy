@@ -52,7 +52,7 @@
     <hr>
     <div id="footer">
     	<p><a href='./clearsessions.php'>Log out</a>.</p>
-		<p>Made by a grad student in his spare time.  <a href="http://tiptheweb.org/tip/" class="ttw-button ttw-button-small">Tip</a> <script src="paypal-button.min.js?merchant=noah@noahliebman.net" 
+		<p>Made by a grad student in his spare time. <script src="paypal-button.min.js?merchant=noah@noahliebman.net" 
 		    data-button="donate" 
 		    data-name="Twitter List Copy" 
 		    data-size="small"
@@ -79,20 +79,6 @@
 	src="http://c.statcounter.com/6325636/0/86a49f2d/1/"
 	alt="weebly reliable statistics" /></a></div></noscript>
 	<!-- End of StatCounter Code -->
-	
-	<!-- Start TipTheWeb code -->
-	<script>
-		(function (window, document) {
-		    var ref = document.getElementsByTagName('script')[0],
-		        script = document.createElement('script'),
-		        secure = window.location.protocol === 'https:';
-		    script.async = true;
-		    script.src = secure ? 'https://secure-platform.tiptheweb.org/tip/button.js'
-		                        : 'http://platform.tiptheweb.org/tip/button.js';
-		    ref.parentNode.insertBefore(script, ref);
-		}(this, this.document));
-	</script>
-	<!-- End TipTheWeb code -->
 
 	<script src="paypal-button.min.js" type="text/javascript"></script>
 	
