@@ -56,7 +56,7 @@
 		    data-button="donate" 
 		    data-name="Twitter List Copy" 
 		    data-size="small"
-		    data-callback="http://projects.noahliebman.net/listcopy/" data-env="sandbox"></script>
+		    data-callback="http://projects.noahliebman.net/listcopy/"></script>
 		</p>
 		<p>Make this better on <a href="https://github.com/Noleli/listcopy">Github</a>.</p>
 		<p>A <a href="http://twitter.com/Noleli">Noleli</a>/<a href="http://noahliebman.net">.nl</a> production.</p>
