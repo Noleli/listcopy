@@ -6,5 +6,4 @@ This utility lets you copy any public Twitter list to a list of your own.
 
 I am currently hosting a fully functional instance: http://projects.noahliebman.net/listcopy/
 
-By [Noah Liebman](http://noahliebman.net)
-Uses [twitteroauth](http://github.com/abraham/twitteroauth)
+Uses [twitteroauth](http://github.com/abraham/twitteroauth).
