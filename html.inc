@@ -52,12 +52,6 @@
     <hr>
     <div id="footer">
     	<p><a href='./clearsessions.php'>Log out</a>.</p>
-		<p>Made by a grad student in his spare time. <script src="paypal-button.min.js?merchant=noah@noahliebman.net" 
-		    data-button="donate" 
-		    data-name="Twitter List Copy" 
-		    data-size="small"
-		    data-callback="http://projects.noahliebman.net/listcopy/"></script>
-		</p>
 		<p>Make this better on <a href="https://github.com/Noleli/listcopy">Github</a>.</p>
 		<p>A <a href="http://twitter.com/Noleli">Noleli</a>/<a href="http://noahliebman.net">.nl</a> production.</p>
 	</div>
