@@ -91,7 +91,8 @@ if($_REQUEST["action"] == "copyLists")
 		$cursor = $results->next_cursor_str;
 		$total+=count($members);
 	}
-	echo "Added ".$total." people to ".$_REQUEST["dest_list"].".";
+	$results = $connection->get("lists/show", array("slug" => $_REQUEST["dest_list"], "owner_screen_name" => $screen_name));
+	echo "Added ".$total." people to ".$_REQUEST["dest_list"].", list now contains ".$results->member_count." members.";
 	die;
 }
 
