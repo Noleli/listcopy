@@ -24,7 +24,7 @@
     <?php } ?>
     
     <?php if($content == "") // this is a super janky test
-    {?>
+    { ?>
 	<div>
 		<h2>Copy from</h2>
 		<p><label for="source_user">User who owns the list you want to copy: </label><input id="source_user" name="source_user" />
@@ -32,13 +32,14 @@
 		<p><label for="source_list">The list you want to copy: </label><select id="source_list" name="source_list"></select></p>
 		
 		<h2>Copy to</h2>
-		<p>Heads up: this will <em>not</em> wipe out a list first, so you should probably create a new list and copy to that. I haven’t tested how it might behave when copying onto a non-blank list. I <em>should</em> merge them, but I don’t know that for sure.</p>
-		<p><label for="dest_list">One of your existing lists: </label><select id="dest_list" name="source_list"><? echo $mylists_options; ?></select></p>
+		<p>Heads up: this will <em>not</em> wipe out a list first, so you should probably create a new list and copy to that. I haven’t tested how it might behave when copying onto a non-blank list. I <em>should</em> merge them, but I don’t know that for sure.<br/>
+		Also, if the new count members is less than expected, it can be because of <a href=\"https://twittercommunity.com/t/cant-add-members-to-a-list-code-104/25824\">dynamic rate limitation</a> (copy failed, then wait 12-24h) or some members of the source list became private.</p>
+		<p><label for="dest_list">One of your existing lists: </label><select id="dest_list" name="source_list"><?php echo $mylists_options; ?></select></p>
 		<p><input type="button" name="doCopy" id="doCopy" value="Copy!" /></p>
 		<div id="working"></div>
 
 	</div>
-    <? } ?>
+    <?php } ?>
     <!--<p>
       <pre>
         <?php
