@@ -14,7 +14,7 @@ function getUserLists(username)
 		//console.log(result);
 		$("#source_list").empty();
 		$.each($.parseJSON(result), function(i, v) {
-			var opt = $("<option value='" + v + "'>" + v + "</option>");
+			var opt = $("<option value='" + v.slug + "'>" + v.name + "</option>");
 			$("#source_list").append(opt);
 		});
 	});
@@ -32,5 +32,5 @@ function doCopy()
 	$.get("index.php", data, function(result) {
 		$("#working").html(result);
 	});
-	
+
 }

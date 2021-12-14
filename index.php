@@ -49,17 +49,14 @@ $mylists = getListsByUser($screen_name, $connection);
 $mylists_options = "";
 foreach($mylists as $list)
 {
-	$mylists_options.="<option value='$list'>$list</option>\n";
+	$mylists_options.="<option value='{$list->slug}'>{$list->name}</option>\n";
 }
 
 function getListsByUser($username, &$connection)
 {
 	$result = $connection->get("lists/ownerships", array('screen_name' => $username, 'count' => 1000));
 	$lists = array();
-	foreach($result->lists as $list)
-	{
-		$lists[] = $list->slug;
-	}
+	$lists = $result->lists;
 	return $lists;
 }
 
@@ -80,7 +77,7 @@ if($_REQUEST["action"] == "copyLists")
 		$results = $connection->get("lists/members", array("slug" => $_REQUEST["source_list"], "owner_screen_name" => $_REQUEST["source_user"], "include_entities" => "false", "skip_status" => "t", "cursor" => $cursor));
 		$members = array();
 		// echo json_encode($results);
-		
+
 		foreach($results->users as $user)
 		{
 			$members[] = $user->screen_name;
